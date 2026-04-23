@@ -289,7 +289,7 @@ li, .footer-links li {
 
 /* ===== BUTTONS ===== */
 .btn-subtle {
-    background-color: var(--color-subtle);
+    background-color: var(--color-lighter);
     color: white;
     letter-spacing: 0.5px;
 }
