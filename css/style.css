@@ -262,8 +262,8 @@ li, .footer-links li {
 .navbar-toggler .custom-toggler-icon {
     width: 40px;
     height: 32px;
-    background: var(--color-main);
-    color: white !important;
+    /* background: var(--color-main); */
+    color: black !important;
     padding: 5px;
     display: flex;
     flex-direction: column;
@@ -275,7 +275,7 @@ li, .footer-links li {
     display: block;
     height: 2px;
     width: 100%;
-    background-color: white;
+    background-color: black;
 }
 
 .navbar-toggler .bar-1,
