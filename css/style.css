@@ -50,7 +50,7 @@
     --color-main: #1F8A5B;
     --color-darker: #0D5B3C;
     --color-lighter: #47B77D;
-    --color-subtle: #1F4F9E;
+    --color-subtle: #47B77D;
     --color-border: #BEBCC7;
     --color-accent: #F4F4F4;
     --color-error:#E22D2D;
@@ -778,6 +778,9 @@ li, .footer-links li {
     background-color: var(--color-main);
     padding: 12px;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ===== MAPS ===== */
@@ -888,8 +891,8 @@ li, .footer-links li {
 /* ===== FOOTER ===== */
 .footer-logo {
     object-fit: contain;
-    width: 200px;
-    height: 32px;
+    width: 300px;
+    height: 60px;
 }
 
 .footer-icon {

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -34,7 +34,7 @@
     />
     <meta name="author" content="Taj Al Mubarak Transport" />
     <title>Home - Taj Al Mubarak Transport</title>
-    <link rel="icon" type="image/x-icon" href="icon/favicon.jpg" />
+    <link rel="icon" type="image/x-icon" href="icon/favicon.png" />
     <link href="lib/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="lib/css/fontawesome.css" />
     <link rel="stylesheet" href="lib/css/swiper-bundle.min.css" />
@@ -69,8 +69,11 @@
         <div>
           <span class="small-text d-flex gap-2 align-items-center"
             ><i class="fa-solid fa-envelope-open-text"></i
-            >info@tajalmubarak.com<i class="fa-solid fa-phone ms-3"></i
-            >0522049312 / 0559292786</span
+            ><a href="mailto:info@tajalmubarak.com" class="text-white"
+              >info@tajalmubarak.com</a
+            ><i class="fa-solid fa-phone ms-3"></i
+            ><a href="tel:+0522049312" class="text-white">0522049312</a> /
+            <a href="tel:+0559292786" class="text-white">0559292786</a></span
           >
         </div>
         <div>
@@ -87,7 +90,13 @@
           class="container-lg d-flex justify-content-between align-items-center px-0"
         >
           <a class="navbar-brand ms-0 ms-sm-3 ms-lg-0" href="index.html">
-            <img src="img/logo-light.png" alt="Brand Logo" width="250" height="45" class="img-fluid navbar-img">
+            <img
+              src="img/logo-light.png"
+              alt="Brand Logo"
+              width="250"
+              height="45"
+              class="img-fluid navbar-img"
+            />
           </a>
 
           <div class="d-flex navbar-text">
@@ -135,7 +144,7 @@
                       <li class="nav-item">
                         <a class="nav-link" href="clients.html">Clients</a>
                       </li>
-                       <li class="nav-item">
+                      <li class="nav-item">
                         <a class="nav-link" href="services.html">Services</a>
                       </li>
                       <li class="nav-item">
@@ -196,29 +205,39 @@
                     </div>
                     Thank you! Your transport request was received
                   </div>
-                  <h4>Request a Transport Quote</h4>
+
+                  <h4>Quick Transport Enquiry</h4>
+                  <p class="c-text-2 mb-4" style="font-size: 14px">
+                    We'll contact you within a few hours.
+                  </p>
+
                   <input
                     type="text"
-                    placeholder="Pickup Location"
-                    class="hero-input mt-4 mb-3"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Drop Location"
+                    placeholder="Your Name"
                     class="hero-input mb-3"
+                    required
                   />
+
                   <input
-                    type="text"
-                    placeholder="Service Type"
+                    type="tel"
+                    placeholder="Phone / WhatsApp Number"
                     class="hero-input mb-3"
+                    required
                   />
-                  <input
-                    type="number"
-                    placeholder="Passenger Count"
-                    class="hero-input mb-3"
-                  />
+
+                  <select class="hero-input mb-3">
+                    <option value="" disabled selected>Service Type</option>
+                    <option value="staff">Staff Transport</option>
+                    <option value="school">School Bus</option>
+                    <option value="airport">Airport Transfer</option>
+                    <option value="tourism">Tourism Trip</option>
+                    <option value="corporate">Corporate Travel</option>
+                  </select>
+
                   <div class="row mx-0">
-                    <button class="btn-subtle">Send Inquiry</button>
+                    <button class="btn-subtle" type="submit">
+                      Send Enquiry
+                    </button>
                   </div>
                 </form>
               </div>
@@ -268,11 +287,11 @@
                 corporate transport across the UAE with trained drivers and a
                 well-maintained fleet.
               </p>
-              <div class="d-flex gap-1 gap-sm-5 mt-5 mb-4">
+              <div class="d-md-flex gap-1 gap-sm-5 mt-5 mb-4">
                 <ul class="px-0">
                   <li>
-                    <i class="fa-solid fa-check fa-sm c-main me-2"></i>Experienced
-                    drivers
+                    <i class="fa-solid fa-check fa-sm c-main me-2"></i
+                    >Experienced drivers
                   </li>
                   <li class="mt-1">
                     <i class="fa-solid fa-check fa-sm c-main me-2"></i>Regular
@@ -332,7 +351,9 @@
               <span class="c-main fs-56">Journey</span>
             </h2>
           </div>
-          <a href="services.html" class="btn-subtle mb-4 mb-lg-0">All Services</a>
+          <a href="services.html" class="btn-subtle mb-4 mb-lg-0"
+            >All Services</a
+          >
         </div>
         <div class="container-sm px-0 mt-4">
           <div class="row row-cols-1 row-cols-sm-2 g-4">
@@ -359,9 +380,6 @@
                     routes
                   </span>
                 </div>
-                <div class="my-4 pt-1 pt-lg-4">
-                  <a href="services-detail.html" class="btn-main">Learn More</a>
-                </div>
               </div>
             </div>
             <div class="col">
@@ -385,9 +403,6 @@
                     ><i class="fa-solid fa-check c-lighter me-2"></i>Activity
                     travel
                   </span>
-                </div>
-                <div class="my-4 pt-1 pt-lg-4">
-                  <a href="services-detail.html" class="btn-main">Learn More</a>
                 </div>
               </div>
             </div>
@@ -414,9 +429,6 @@
                     transfers
                   </span>
                 </div>
-                <div class="my-4 pt-1 pt-lg-4">
-                  <a href="services-detail.html" class="btn-main">Learn More</a>
-                </div>
               </div>
             </div>
             <div class="col">
@@ -441,9 +453,6 @@
                     ><i class="fa-solid fa-check c-lighter me-2"></i>Weddings
                   </span>
                 </div>
-                <div class="my-4 pt-1 pt-lg-4">
-                  <a href="services-detail.html" class="btn-main">Learn More</a>
-                </div>
               </div>
             </div>
           </div>
@@ -451,267 +460,6 @@
       </div>
     </div>
     <!-- Service End -->
-    <!-- Bus Start -->
-    <!-- <div class="bg-heading overflow-hidden">
-      <div class="page-size">
-        <div class="d-flex flex-column align-items-center">
-          <span class="text-subtitle ms-1 mt-0 c-white">our fleet</span>
-          <h2 class="my-4 c-white text-center">
-            Modern, Comfortable, and
-            <span class="c-lighter fs-56">Reliable</span>
-          </h2>
-          <p class="c-text-2 my-4 pt-2 col-12 col-lg-6 text-center">
-            Comfortable buses sized for staff transportation, school routes,
-            tourist travel, and corporate transport.
-          </p>
-        </div>
-        <div class="container-lg px-0">
-          <div class="row row-cols-1 row-cols-lg-3 g-4 mt-lg-5 fade-in-up">
-            <div class="col">
-              <div class="bus-card">
-                <div class="d-flex justify-content-between align-items-end">
-                  <h4 class="c-heading">Voyager 600</h4>
-                  <span class="text-subtitle c-text-1">economy</span>
-                </div>
-                <img src="img/bus-1.png" alt="bus" class="my-4" />
-                <div class="row row-cols-3 my-4">
-                  <span class="border-right"
-                    ><i class="fa-solid fa-gas-pump c-main"
-                      ><span class="small-text c-text-1 c-main ms-2 fw-bolder"
-                        >200 liters</span
-                      ></i
-                    >
-                  </span>
-                  <span class="border-right"
-                    ><i class="fa-solid fa-users c-main"
-                      ><span class="small-text c-text-1 c-main ms-2 fw-bolder"
-                        >50 Seats</span
-                      ></i
-                    >
-                  </span>
-                  <span
-                    ><i class="fa-solid fa-bus-simple c-main"
-                      ><span class="small-text c-text-1 c-main ms-2 fw-bolder"
-                        >Manual</span
-                      ></i
-                    >
-                  </span>
-                </div>
-                <div class="d-flex justify-content-between">
-                  <div class="d-flex align-items-end">
-                    <h3>$89.00/</h3>
-                    <span class="mb-2 ms-1">Day</span>
-                  </div>
-                  <a href="bus-detail.html" class="btn-subtle">Rent Now</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="bus-card">
-                <div class="d-flex justify-content-between align-items-end">
-                  <h4 class="c-heading">Tourer 400</h4>
-                  <span class="text-subtitle c-text-1">executive</span>
-                </div>
-                <img src="img/bus-2.png" alt="bus" class="my-4" />
-                <div class="row row-cols-3 my-4">
-                  <span class="border-right"
-                    ><i class="fa-solid fa-gas-pump c-main"
-                      ><span class="small-text c-text-1 c-main ms-2 fw-bolder"
-                        >200 liters</span
-                      ></i
-                    >
-                  </span>
-                  <span class="border-right"
-                    ><i class="fa-solid fa-users c-main"
-                      ><span class="small-text c-text-1 c-main ms-2 fw-bolder"
-                        >40 Seats</span
-                      ></i
-                    >
-                  </span>
-                  <span
-                    ><i class="fa-solid fa-bus-simple c-main"
-                      ><span class="small-text c-text-1 c-main ms-2 fw-bolder"
-                        >Manual</span
-                      ></i
-                    >
-                  </span>
-                </div>
-                <div class="d-flex justify-content-between">
-                  <div class="d-flex align-items-end">
-                    <h3>$125.00/</h3>
-                    <span class="mb-2 ms-1">Day</span>
-                  </div>
-                  <a href="bus-detail.html" class="btn-subtle">Rent Now</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="bus-card">
-                <div class="d-flex justify-content-between align-items-end">
-                  <h4 class="c-heading">Metro 200</h4>
-                  <span class="text-subtitle c-text-1">shuttle</span>
-                </div>
-                <img src="img/bus-3.png" alt="bus" class="my-4" />
-                <div class="row row-cols-3 my-4">
-                  <span class="border-right"
-                    ><i class="fa-solid fa-gas-pump c-main"
-                      ><span class="small-text c-text-1 c-main ms-2 fw-bolder"
-                        >200 liters</span
-                      ></i
-                    >
-                  </span>
-                  <span class="border-right"
-                    ><i class="fa-solid fa-users c-main"
-                      ><span class="small-text c-text-1 c-main ms-2 fw-bolder"
-                        >20 Seats</span
-                      ></i
-                    >
-                  </span>
-                  <span
-                    ><i class="fa-solid fa-bus-simple c-main"
-                      ><span class="small-text c-text-1 c-main ms-2 fw-bolder"
-                        >Manual</span
-                      ></i
-                    >
-                  </span>
-                </div>
-                <div class="d-flex justify-content-between">
-                  <div class="d-flex align-items-end">
-                    <h3>$250.00/</h3>
-                    <span class="mb-2 ms-1">Day</span>
-                  </div>
-                  <a href="bus-detail.html" class="btn-subtle">Rent Now</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="bus-card">
-                <div class="d-flex justify-content-between align-items-end">
-                  <h4 class="c-heading">Horizon 350</h4>
-                  <span class="text-subtitle c-text-1">economy</span>
-                </div>
-                <img src="img/bus-4.png" alt="bus" class="my-4" />
-                <div class="row row-cols-3 my-4">
-                  <span class="border-right"
-                    ><i class="fa-solid fa-gas-pump c-main"
-                      ><span class="small-text c-text-1 c-main ms-2 fw-bolder"
-                        >200 liters</span
-                      ></i
-                    >
-                  </span>
-                  <span class="border-right"
-                    ><i class="fa-solid fa-users c-main"
-                      ><span class="small-text c-text-1 c-main ms-2 fw-bolder"
-                        >55 Seats</span
-                      ></i
-                    >
-                  </span>
-                  <span
-                    ><i class="fa-solid fa-bus-simple c-main"
-                      ><span class="small-text c-text-1 c-main ms-2 fw-bolder"
-                        >Manual</span
-                      ></i
-                    >
-                  </span>
-                </div>
-                <div class="d-flex justify-content-between">
-                  <div class="d-flex align-items-end">
-                    <h3>$89.00/</h3>
-                    <span class="mb-2 ms-1">Day</span>
-                  </div>
-                  <a href="bus-detail.html" class="btn-subtle">Rent Now</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="bus-card">
-                <div class="d-flex justify-content-between align-items-end">
-                  <h4 class="c-heading">Mover 150</h4>
-                  <span class="text-subtitle c-text-1">executive</span>
-                </div>
-                <img src="img/bus-5.png" alt="bus" class="my-4" />
-                <div class="row row-cols-3 my-4">
-                  <span class="border-right"
-                    ><i class="fa-solid fa-gas-pump c-main"
-                      ><span class="small-text c-text-1 c-main ms-2 fw-bolder"
-                        >200 liters</span
-                      ></i
-                    >
-                  </span>
-                  <span class="border-right"
-                    ><i class="fa-solid fa-users c-main"
-                      ><span class="small-text c-text-1 c-main ms-2 fw-bolder"
-                        >45 Seats</span
-                      ></i
-                    >
-                  </span>
-                  <span
-                    ><i class="fa-solid fa-bus-simple c-main"
-                      ><span class="small-text c-text-1 c-main ms-2 fw-bolder"
-                        >Manual</span
-                      ></i
-                    >
-                  </span>
-                </div>
-                <div class="d-flex justify-content-between">
-                  <div class="d-flex align-items-end">
-                    <h3>$125.00/</h3>
-                    <span class="mb-2 ms-1">Day</span>
-                  </div>
-                  <a href="bus-detail.html" class="btn-subtle">Rent Now</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="bus-card">
-                <div class="d-flex justify-content-between align-items-end">
-                  <h4 class="c-heading">Luxe 617</h4>
-                  <span class="text-subtitle c-text-1">shuttle</span>
-                </div>
-                <img src="img/bus-6.png" alt="bus" class="my-4" />
-                <div class="row row-cols-3 my-4">
-                  <span class="border-right"
-                    ><i class="fa-solid fa-gas-pump c-main"
-                      ><span class="small-text c-text-1 c-main ms-2 fw-bolder"
-                        >200 liters</span
-                      ></i
-                    >
-                  </span>
-                  <span class="border-right"
-                    ><i class="fa-solid fa-users c-main"
-                      ><span class="small-text c-text-1 c-main ms-2 fw-bolder"
-                        >25 Seats</span
-                      ></i
-                    >
-                  </span>
-                  <span
-                    ><i class="fa-solid fa-bus-simple c-main"
-                      ><span class="small-text c-text-1 c-main ms-2 fw-bolder"
-                        >Manual</span
-                      ></i
-                    >
-                  </span>
-                </div>
-                <div class="d-flex justify-content-between">
-                  <div class="d-flex align-items-end">
-                    <h3>$250.00/</h3>
-                    <span class="mb-2 ms-1">Day</span>
-                  </div>
-                  <a href="bus-detail.html" class="btn-subtle">Rent Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="bus-button fade-in-right mt-4 delay-1">
-          <p class="c-text-2 mb-0">
-            Explore Our Fleet: A Bus for Every Journey
-            <a href="bus-detail.html" class="c-white">> More Busses</a>
-          </p>
-        </div>
-      </div>
-    </div> -->
-    <!-- Bus End -->
     <!-- Why Choose Us Start -->
     <div class="bg-white overflow-hidden">
       <div class="page-size">
@@ -741,10 +489,12 @@
               </div>
               <div class="d-flex align-items-center gap-3 mt-4">
                 <div class="order-1 order-lg-0">
-                  <h4 class="choose-align mb-3">Experienced and trained drivers</h4>
+                  <h4 class="choose-align mb-3">
+                    Experienced and trained drivers
+                  </h4>
                   <p class="choose-align">
-                    Professional, courteous drivers focused on punctual and
-                    safe journeys.
+                    Professional, courteous drivers focused on punctual and safe
+                    journeys.
                   </p>
                 </div>
                 <div class="choose-card order-0 order-lg-1">
@@ -838,8 +588,8 @@
               </h2>
               <p class="mb-5">
                 We support staff movements, school routes, corporate travel,
-                airport transfers, and tourist transport with a focus on
-                safety and punctuality.
+                airport transfers, and tourist transport with a focus on safety
+                and punctuality.
               </p>
               <div class="swiper-container overflow-hidden">
                 <div class="swiper-wrapper">
@@ -893,7 +643,9 @@
                           <span class="testimonial-client-name"
                             >School Coordinator</span
                           >
-                          <span class="testimonial-client-label">Education Sector</span>
+                          <span class="testimonial-client-label"
+                            >Education Sector</span
+                          >
                         </div>
                       </div>
                     </div>
@@ -904,7 +656,8 @@
                         <i class="fa-solid fa-quote-right fs-50 c-main"></i>
                       </div>
                       <p class="my-4">
-                        Airport transfers and tourist rides are well managed, comfortable, and easy to coordinate.
+                        Airport transfers and tourist rides are well managed,
+                        comfortable, and easy to coordinate.
                       </p>
                       <div class="d-flex pt-3">
                         <img
@@ -918,7 +671,9 @@
                           <span class="testimonial-client-name"
                             >Travel Partner</span
                           >
-                          <span class="testimonial-client-label">Tourism Client</span>
+                          <span class="testimonial-client-label"
+                            >Tourism Client</span
+                          >
                         </div>
                       </div>
                     </div>
@@ -931,423 +686,6 @@
       </div>
     </div>
     <!-- Tesimonials End -->
-    <!-- Destination Start -->
-    <!-- <div class="bg-white overflow-hidden">
-      <div class="page-size">
-        <div class="d-lg-flex justify-content-between align-items-end">
-          <div class="col-12 col-lg-4">
-            <span class="text-subtitle ms-1 mt-0">service coverage</span>
-            <h2 class="mt-4">
-              Industries we
-              <span class="c-main">serve</span>
-            </h2>
-          </div>
-          <div class="col-12 col-lg-1"></div>
-          <div class="d-flex col-12 col-lg-4 mt-4">
-              <p class="mb-0">
-              Tailored transport services for organizations, schools, travel
-              partners, and event planners.
-            </p>
-          </div>
-          <div class="col-12 col-lg-1"></div>
-          <div class="col-12 col-lg-2">
-            <a href="services.html" class="btn-subtle mb-4 mb-lg-0 mt-4 mt-lg-0">
-              View Services
-            </a>
-          </div>
-        </div>
-        <div class="container-sm px-0 mt-5">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 fade-in-up">
-            <div class="col destination-col1">
-              <div class="destination-img-wrapper">
-                <img
-                  src="img/destination-1.jpg"
-                  alt="destination"
-                  class="destination-img"
-                />
-              </div>
-              <div class="destination-card">
-                <h5 class="c-white my-4">Staff Transport</h5>
-                <p class="c-text-2">
-                  Daily employee pickups and drop-offs with dependable timing.
-                </p>
-                <a href="services.html" class="destination-link">&gt; Learn More</a>
-              </div>
-            </div>
-            <div class="col destination-col2">
-              <div class="destination-img-wrapper">
-                <img
-                  src="img/destination-2.jpg"
-                  alt="destination"
-                  class="destination-img"
-                />
-              </div>
-              <div class="destination-card">
-                <h5 class="c-white my-4">School Transport</h5>
-                <p class="c-text-2">
-                  Safe and supervised student travel with trained drivers.
-                </p>
-                <a href="services.html" class="destination-link">&gt; Learn More</a>
-              </div>
-            </div>
-            <div class="col destination-col3">
-              <div class="destination-img-wrapper">
-                <img
-                  src="img/destination-3.jpg"
-                  alt="destination"
-                  class="destination-img"
-                />
-              </div>
-              <div class="destination-card">
-                <h5 class="c-white my-4">Airport Transfers</h5>
-                <p class="c-text-2">
-                  Seamless pickup and hotel transfer support for guests.
-                </p>
-                <a href="services.html" class="destination-link">&gt; Learn More</a>
-              </div>
-            </div>
-            <div class="col destination-col4">
-              <div class="destination-img-wrapper">
-                <img
-                  src="img/destination-4.jpg"
-                  alt="destination"
-                  class="destination-img"
-                />
-              </div>
-              <div class="destination-card">
-                <h5 class="c-white my-4">Tourist & Event</h5>
-                <p class="c-text-2">
-                  Comfortable transport for tours, celebrations, and special
-                  occasions.
-                </p>
-                <a href="services.html" class="destination-link">&gt; Learn More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- Destination End -->
-    <!-- Blog Post Start -->
-    <!-- <div class="bg-accent overflow-hidden">
-      <div class="page-size">
-        <div class="d-lg-flex justify-content-between align-items-end">
-          <div class="col-12 col-lg-6">
-            <span class="text-subtitle ms-1 mt-0">service focus</span>
-            <h2 class="my-4">
-              Operational
-              <span class="c-main">insights</span>
-            </h2>
-          </div>
-          <a href="services.html" class="btn-subtle mb-4 mb-lg-0">View Services</a>
-        </div>
-        <div class="container-sm px-0 mt-5">
-          <div
-            class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 fade-in-up"
-          >
-            <div class="col blog-col1">
-              <a href="single-post.html">
-                <div class="blog-img-wrapper">
-                  <img src="img/blog-post-1.jpg" alt="blog" class="blog-img" />
-                </div>
-              </a>
-              <div class="blog-card">
-                <span class="blog-meta"
-                  >zaderonstudio
-                  <i class="fa-solid fa-angles-right c-lighter mx-2"></i>
-                  November 23, 2024</span
-                >
-                <a href="single-post.html"
-                  ><h5 class="c-white my-4">
-                  Safety checks before every trip
-                  </h5></a
-                >
-              </div>
-            </div>
-            <div class="col blog-col2">
-              <a href="single-post.html">
-                <div class="blog-img-wrapper">
-                  <img src="img/blog-post-2.jpg" alt="blog" class="blog-img" />
-                </div>
-              </a>
-              <div class="blog-card">
-                <span class="blog-meta"
-                  >zaderonstudio
-                  <i class="fa-solid fa-angles-right c-lighter mx-2"></i>
-                  November 23, 2024</span
-                >
-                <a href="single-post.html"
-                  ><h5 class="c-white my-4">
-                    Managing comfortable routes for long journeys
-                  </h5></a
-                >
-              </div>
-            </div>
-            <div class="col blog-col3">
-              <a href="single-post.html">
-                <div class="blog-img-wrapper">
-                  <img src="img/blog-post-3.jpg" alt="blog" class="blog-img" />
-                </div>
-              </a>
-              <div class="blog-card">
-                <span class="blog-meta"
-                  >zaderonstudio
-                  <i class="fa-solid fa-angles-right c-lighter mx-2"></i>
-                  November 23, 2024</span
-                >
-                <a href="single-post.html"
-                  ><h5 class="c-white my-4">
-                    Why flexible contracts matter for transport plans
-                  </h5></a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- Blog Post End -->
-    <!-- FAQs Start -->
-    <!-- <div class="bg-white overflow-hidden">
-      <div class="page-size">
-        <div class="d-lg-flex justify-content-between align-items-end">
-          <div class="col-12 col-lg-6">
-            <span class="text-subtitle ms-1 mt-0">FAQS</span>
-            <h2 class="my-4">
-              Everything You Need to Know About
-              <span class="c-main fs-56">Taj Al Mubarak</span>
-            </h2>
-          </div>
-          <div class="col-12 col-lg-5">
-            <p class="mb-4 pb-3 mt-5 mt-lg-0">
-              These are the most common questions clients ask before booking a
-              staff, school, tourist, or corporate transport service.
-            </p>
-            <a href="faqs.html" class="btn-subtle mb-4 mb-lg-0">More FAQs</a>
-          </div>
-        </div>
-        <div class="container-lg px-0 mt-5">
-          <div class="row row-cols-1 row-cols-lg-2 g-1 g-lg-4">
-            <div class="col fade-in-up">
-              <div class="accordion" id="faqsAccordion">
-                <div class="accordion-item">
-                  <span class="accordion-header" id="headingOne">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne"
-                      aria-expanded="false"
-                      aria-controls="collapseOne"
-                    >
-                      What services does Taj Al Mubarak offer?
-                    </button>
-                  </span>
-                  <div
-                    id="collapseOne"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingOne"
-                    data-bs-parent="#faqsAccordion"
-                  >
-                    <div class="accordion-body">
-                      We provide staff transportation, school bus service,
-                      airport and hotel transfers, tourist trips, and event
-                      transport.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <span class="accordion-header" id="headingThree">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseThree"
-                      aria-expanded="false"
-                      aria-controls="collapseThree"
-                    >
-                      How do I request a quote?
-                    </button>
-                  </span>
-                  <div
-                    id="collapseThree"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingThree"
-                    data-bs-parent="#faqsAccordion"
-                  >
-                    <div class="accordion-body">
-                      You can call, email, or submit the contact form with your
-                      route, service type, and passenger count.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <span class="accordion-header" id="headingFour">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFour"
-                      aria-expanded="false"
-                      aria-controls="collapseFour"
-                    >
-                      Do you offer long-term contracts?
-                    </button>
-                  </span>
-                  <div
-                    id="collapseFour"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingFour"
-                    data-bs-parent="#faqsAccordion"
-                  >
-                    <div class="accordion-body">
-                      Yes, we support flexible short-term and long-term
-                      transport contracts.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <span class="accordion-header" id="headingFive">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFive"
-                      aria-expanded="false"
-                      aria-controls="collapseFive"
-                    >
-                      Can I customize routes and schedules?
-                    </button>
-                  </span>
-                  <div
-                    id="collapseFive"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingFive"
-                    data-bs-parent="#faqsAccordion"
-                  >
-                    <div class="accordion-body">
-                      Yes, routes and schedules are tailored to your operating
-                      hours and passenger requirements.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col fade-in-up delay-1">
-              <div class="accordion" id="faqsAccordion2">
-                <div class="accordion-item">
-                  <span class="accordion-header" id="headingOne2">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne2"
-                      aria-expanded="false"
-                      aria-controls="collapseOne2"
-                    >
-                      What safety measures do you follow?
-                    </button>
-                  </span>
-                  <div
-                    id="collapseOne2"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingOne2"
-                    data-bs-parent="#faqsAccordion2"
-                  >
-                    <div class="accordion-body">
-                      Our fleet is maintained regularly, and our drivers follow
-                      strict safety and route procedures.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <span class="accordion-header" id="headingThree2">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseThree2"
-                      aria-expanded="false"
-                      aria-controls="collapseThree2"
-                    >
-                      Do your buses have GPS tracking?
-                    </button>
-                  </span>
-                  <div
-                    id="collapseThree2"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingThree2"
-                    data-bs-parent="#faqsAccordion2"
-                  >
-                    <div class="accordion-body">
-                      Yes, real-time GPS tracking is available for better route
-                      visibility and coordination.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <span class="accordion-header" id="headingFour2">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFour2"
-                      aria-expanded="false"
-                      aria-controls="collapseFour2"
-                    >
-                      Is customer support available 24/7?
-                    </button>
-                  </span>
-                  <div
-                    id="collapseFour2"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingFour2"
-                    data-bs-parent="#faqsAccordion2"
-                  >
-                    <div class="accordion-body">
-                      Yes, our team is available around the clock for booking
-                      updates and support.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <span class="accordion-header" id="headingFive2">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFive2"
-                      aria-expanded="false"
-                      aria-controls="collapseFive2"
-                    >
-                      Do you accommodate small groups?
-                    </button>
-                  </span>
-                  <div
-                    id="collapseFive2"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingFive2"
-                    data-bs-parent="#faqsAccordion2"
-                  >
-                    <div class="accordion-body">
-                      Yes, we have flexible transport options for small groups,
-                      staff teams, and school routes.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- FAQs End -->
     <!-- Get Started Start -->
     <div class="bg-white overflow-hidden">
       <div class="page-size">
@@ -1388,104 +726,152 @@
     <!-- Get Started End -->
     <!-- Footer Start -->
     <div class="bg-heading">
-      <div class="page-size">
+      <div class="page-size pb-0 pt-5">
         <div class="container-lg px-0">
-          <div class="row mt-5">
-            <div class="col-12 col-lg-5">
-              <div class="footer-brand">
-                <span class="brand-mark brand-mark--inverse">
-                  <span class="brand-mark__name">Taj Al Mubarak</span>
-                  <span class="brand-mark__tag">Transport</span>
-                </span>
-              </div>
-              <p class="c-text-2 mt-4 me-5">
+          <div class="row mt-5 pb-5">
+            <!-- Brand Column -->
+            <div class="col-12 col-lg-4 pe-lg-5">
+              <img
+                src="img/logo-dark.png"
+                alt="Taj Al Mubarak Logo"
+                class="footer-logo"
+              />
+              <p class="c-text-2 mt-4">
                 Passenger transport across the UAE for staff, schools, tourism,
                 airport transfers, and corporate travel.
               </p>
-              <div class="d-flex gap-3 mt-4">
-                <div class="d-flex gap-2 py-2">
-                  <a href="https://www.facebook.com/" class="footer-icon">
-                    <i class="fa-brands fa-facebook-f"></i>
-                  </a>
-                  <a href="https://www.twitter.com/" class="footer-icon">
-                    <i class="fa-brands fa-instagram"></i>
-                  </a>
-                  <a href="https://linkedin.com/" class="footer-icon">
-                    <i class="fa-brands fa-linkedin"></i>
-                  </a>
-                  <a href="https://www.youtube.com/" class="footer-icon">
-                    <i class="fa-brands fa-youtube"></i
-                  ></a>
-                </div>
+              <div class="d-flex gap-2 mt-4">
+                <a
+                  href="https://www.facebook.com/"
+                  class="footer-icon"
+                  aria-label="Facebook"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/"
+                  class="footer-icon"
+                  aria-label="Instagram"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a
+                  href="https://linkedin.com/"
+                  class="footer-icon"
+                  aria-label="LinkedIn"
+                >
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a
+                  href="https://www.youtube.com/"
+                  class="footer-icon"
+                  aria-label="YouTube"
+                >
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
               </div>
             </div>
-            <div class="col-12 col-lg-2 mt-4 mt-lg-0">
-              <h5 class="fw-bolder c-white">Explore</h5>
-              <ul class="footer-links">
-                <li>
-                  <a class="footer-link" href="index.html">Home</a>
-                </li>
-                <li>
-                  <a class="footer-link" href="about.html">About</a>
-                </li>
-                 <li>
-                  <a class="footer-link" href="clients.html">Clients</a>
-                </li>
+
+            <!-- Quick Links -->
+            <div class="col-6 col-lg-2 mt-5 mt-lg-0">
+              <h5 class="fw-bolder c-white mb-3">Quick Links</h5>
+              <ul class="footer-links d-flex flex-column gap-3">
+                <li><a class="footer-link" href="index.html">Home</a></li>
+                <li><a class="footer-link" href="about.html">About</a></li>
                 <li>
                   <a class="footer-link" href="services.html">Services</a>
                 </li>
-                <li>
-                  <a class="footer-link" href="contact.html">Contact</a>
-                </li>
+                <li><a class="footer-link" href="clients.html">Clients</a></li>
+                <li><a class="footer-link" href="contact.html">Contact</a></li>
               </ul>
             </div>
-            <div class="col-12 col-lg-2 mt-4 mt-lg-0">
-              <h5 class="c-white fw-bolder">Navigation</h5>
-              <ul class="footer-links">
+
+            <!-- Services -->
+            <div class="col-6 col-lg-2 mt-5 mt-lg-0">
+              <h5 class="fw-bolder c-white mb-3">Services</h5>
+              <ul class="footer-links d-flex flex-column gap-3">
                 <li>
-                  <a class="footer-link" href="index.html"
-                    >Home</a
+                  <a class="footer-link" href="services.html"
+                    >Staff Transport</a
                   >
                 </li>
                 <li>
-                  <a class="footer-link" href="about.html">About</a>
+                  <a class="footer-link" href="services.html">School Buses</a>
                 </li>
                 <li>
-                  <a class="footer-link" href="faqs.html">FAQs</a>
+                  <a class="footer-link" href="services.html"
+                    >Airport Transfers</a
+                  >
                 </li>
                 <li>
-                  <a class="footer-link" href="contact.html">Contact</a>
+                  <a class="footer-link" href="services.html">Tourism Trips</a>
+                </li>
+                <li>
+                  <a class="footer-link" href="services.html"
+                    >Corporate Travel</a
+                  >
                 </li>
               </ul>
             </div>
-            <div class="col-12 col-lg-3 order-4 order-lg-0 mt-5 mt-lg-0">
-              <h5 class="c-white mb-4 fw-bolder">Newsletter</h5>
-              <form action="#" method="post" id="newsletterForm" class="pt-2">
-                <div class="popup-message" id="popupMessage">
-                  <div>
-                    <i class="fa-solid fa-check fa-2xl"></i>
-                  </div>
-                  Thank you! The form submitted successfully
-                </div>
-                <input
-                  type="email"
-                  class="footer-input"
-                  placeholder="Insert your email for updates"
-                />
-                <button type="submit" class="footer-btn mt-4">
-                  Subscribe
-                </button>
-              </form>
+
+            <!-- Contact Info -->
+            <div class="col-12 col-lg-4 mt-5 mt-lg-0">
+              <h5 class="c-white fw-bolder mb-3">Get In Touch</h5>
+              <ul class="footer-links">
+                <li class="d-flex align-items-start gap-2 mb-3">
+                  <i class="fa-solid fa-location-dot mt-1 c-white"></i>
+                  <span class="c-text-2">Dubai, United Arab Emirates</span>
+                </li>
+                <li class="d-flex align-items-center gap-2 mb-3">
+                  <i class="fa-solid fa-phone c-white"></i>
+                  <a class="footer-link" href="tel:+0559292786"
+                    >+0559292786</a
+                  >
+                </li>
+                <li class="d-flex align-items-center gap-2 mb-3">
+                  <i class="fa-solid fa-envelope c-white"></i>
+                  <a class="footer-link" href="mailto:info@tajalmubarak.com"
+                    >info@tajalmubarak.com</a
+                  >
+                </li>
+                <li class="d-flex align-items-center gap-2">
+                  <i class="fa-brands fa-whatsapp c-white"></i>
+                  <a class="footer-link" href="https://wa.me/971500000000"
+                    >WhatsApp Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright Bar -->
+        <div class="border-top border-secondary">
+          <div class="container-lg px-0 py-4">
+            <div class="row align-items-center">
+              <div class="col-12 col-md-6 text-center text-md-start">
+                <p class="c-text-2 mb-0">
+                  &copy; <span id="footer-year"></span> Taj Al Mubarak. All
+                  rights reserved.
+                </p>
+              </div>
+              <div class="col-12 col-md-6 text-center text-md-end mt-2 mt-md-0">
+                <a class="footer-link me-3" href="#">Privacy Policy</a>
+                <a class="footer-link" href="#">Terms & Conditions</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <script>
+      document.getElementById("footer-year").textContent =
+        new Date().getFullYear();
+    </script>
     <!-- Footer End -->
     <script src="lib/js/bootstrap.bundle.min.js"></script>
     <script src="lib/js/swiper-bundle.min.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
-
-
