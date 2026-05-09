@@ -157,7 +157,21 @@
         <div class="container-lg px-0">
           <div class="row">
             <div class="col-12 col-lg-8">
-              <form action="#" method="post" class="fade-in-up" id="otherForm">
+              <form action="https://formsubmit.co/ajax/info@tajalmubarak.com" method="POST" class="fade-in-up js-formsubmit-form" id="otherForm" >
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New Contact Page Transport Quote Request - Taj Al Mubarak"
+                />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input
+                  type="text"
+                  name="_honey"
+                  tabindex="-1"
+                  autocomplete="off"
+                  style="display: none"
+                />
                 <div class="bus-detail-contact-card">
                   <h3>Request a Transport Quote</h3>
                   <div class="popup-message-3" id="otherPopupMessage">
@@ -173,16 +187,18 @@
                       class="bus-detail-input mt-1"
                       placeholder="Your Name"
                       name="name"
+                      required
                     />
                   </div>
                   <div class="row row-cols-1 row-cols-sm-2 mt-4">
                     <div>
                       <span class="input-label">Telephone</span>
                       <input
-                        type="number"
+                        type="tel"
                         class="bus-detail-input mt-1"
-                        placeholder="0522049312"
+                        placeholder="Telephone Number"
                         name="phone"
+                        required
                       />
                     </div>
                     <div class="mt-4 mt-sm-0">
@@ -190,8 +206,9 @@
                       <input
                         type="email"
                         class="bus-detail-input mt-1"
-                        placeholder="you@example.com"
+                        placeholder="Email Address"
                         name="email"
+                        required
                       />
                     </div>
                   </div>
@@ -200,18 +217,20 @@
                     <input
                       type="text"
                       class="bus-detail-input mt-1"
-                      placeholder="Service Type"
+                      placeholder="Subject"
                       name="subject"
+                      required
                     />
                   </div>
                   <div class="mt-4">
                     <span class="input-label">Message</span>
                     <textarea
                       class="bus-detail-input mt-1"
-                      placeholder="Pickup location, drop location, date, and passenger count"
+                      placeholder="Message"
                       cols="30"
                       rows="10"
                       name="message"
+                      required
                     ></textarea>
                   </div>
                   <div class="row mt-3 mx-0">

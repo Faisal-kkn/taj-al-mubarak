@@ -209,16 +209,97 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const otherForm = document.getElementById("otherForm");
   if (otherForm) {
-    document
-      .getElementById("otherForm")
-      .addEventListener("submit", function (event) {
-        event.preventDefault();
-        const popupMessage = document.getElementById("otherPopupMessage");
-        popupMessage.style.display = "block";
-        setTimeout(() => {
-          popupMessage.style.display = "none";
-        }, 3000);
-      });
+    otherForm.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      if (!otherForm.classList.contains("js-formsubmit-form")) {
+        showFormStatus(
+          otherForm,
+          "Thank you! Your transport request was received"
+        );
+        return;
+      }
+
+      const honeyInput = otherForm.querySelector('input[name="_honey"]');
+      if (honeyInput && honeyInput.value) {
+        return;
+      }
+
+      const submitButton = otherForm.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton
+        ? submitButton.textContent.trim()
+        : "";
+
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+      }
+
+      try {
+        const payload = Object.fromEntries(new FormData(otherForm).entries());
+        if (payload.email) {
+          payload._replyto = payload.email;
+        }
+        payload._url = window.location.href;
+
+        const response = await fetch(otherForm.action, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+        const result = await response.json().catch(() => ({}));
+
+        if (!response.ok || result.success === false) {
+          throw new Error(result.message || "Unable to send the enquiry.");
+        }
+
+        otherForm.reset();
+        showFormStatus(otherForm, "Thank you! Your transport request was sent");
+      } catch (error) {
+        console.error("Form submission failed:", error);
+        showFormStatus(
+          otherForm,
+          "Sorry, we could not send your enquiry. Please call or WhatsApp us.",
+          true
+        );
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText;
+        }
+      }
+    });
+  }
+
+  function showFormStatus(form, message, isError = false) {
+    const popupMessage =
+      form.querySelector("#otherPopupMessage") ||
+      document.getElementById("otherPopupMessage");
+
+    if (!popupMessage) {
+      return;
+    }
+
+    const iconClass = isError
+      ? "fa-triangle-exclamation"
+      : "fa-check";
+
+    popupMessage.classList.toggle("form-status-error", isError);
+    popupMessage.innerHTML = `
+      <div>
+        <i class="fa-solid ${iconClass} fa-2xl"></i>
+      </div>
+      ${message}
+    `;
+    popupMessage.style.display = "block";
+
+    setTimeout(() => {
+      popupMessage.style.display = "none";
+      popupMessage.classList.remove("form-status-error");
+    }, 3000);
   }
 });
 

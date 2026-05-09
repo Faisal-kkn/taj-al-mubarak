@@ -192,7 +192,26 @@
                 <!-- <i class="fas fa-play-circle play-button" id="playButton"></i> -->
               </div>
               <div class="hero-card mt-4 fade-in-right delay-1">
-                <form action="#" method="post" id="otherForm">
+                <form
+                  action="https://formsubmit.co/ajax/info@tajalmubarak.com"
+                  method="POST"
+                  id="otherForm"
+                  class="js-formsubmit-form"
+                >
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="New Quick Transport Enquiry - Taj Al Mubarak"
+                  />
+                  <input type="hidden" name="_template" value="table" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input
+                    type="text"
+                    name="_honey"
+                    tabindex="-1"
+                    autocomplete="off"
+                    style="display: none"
+                  />
                   <div class="popup-message-2" id="otherPopupMessage">
                     <div>
                       <i class="fa-solid fa-check fa-2xl"></i>
@@ -209,6 +228,7 @@
                     type="text"
                     placeholder="Your Name"
                     class="hero-input mb-3"
+                    name="name"
                     required
                   />
 
@@ -216,16 +236,17 @@
                     type="tel"
                     placeholder="Phone / WhatsApp Number"
                     class="hero-input mb-3"
+                    name="phone"
                     required
                   />
 
-                  <select class="hero-input mb-3">
+                  <select class="hero-input mb-3" name="service" required>
                     <option value="" disabled selected>Service Type</option>
-                    <option value="staff">Staff Transport</option>
-                    <option value="school">School Bus</option>
-                    <option value="airport">Airport Transfer</option>
-                    <option value="tourism">Tourism Trip</option>
-                    <option value="corporate">Corporate Travel</option>
+                    <option value="Staff Transport">Staff Transport</option>
+                    <option value="School Bus">School Bus</option>
+                    <option value="Airport Transfer">Airport Transfer</option>
+                    <option value="Tourism Trip">Tourism Trip</option>
+                    <option value="Corporate Travel">Corporate Travel</option>
                   </select>
 
                   <div class="row mx-0">

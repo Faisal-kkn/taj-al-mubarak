@@ -1034,6 +1034,12 @@ li, .footer-links li {
     color: var(--heading-color);
 }
 
+.popup-message-2.form-status-error,
+.popup-message-3.form-status-error {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 @media screen and (max-width: 992px) {
     h1 { font-size: 60px; }
