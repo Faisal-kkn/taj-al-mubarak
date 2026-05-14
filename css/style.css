@@ -541,6 +541,20 @@ li, .footer-links li {
     border-top-right-radius: 20px;
 }
 
+.service-img-placeholder {
+    aspect-ratio: 16 / 10;
+    background-color: var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-main);
+    border: 1px solid rgba(31, 138, 91, 0.18);
+}
+
+.service-img-placeholder i {
+    font-size: 48px;
+}
+
 .service-detail-card, .bus-detail-card {
     padding: 32px;
     border-radius: 20px;
